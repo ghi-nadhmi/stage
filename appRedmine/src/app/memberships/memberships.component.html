@@ -1,0 +1,90 @@
+ 
+
+  <div  >
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" id="divElement" style="background-color:#F0F8FF">
+            <div class="card-header border-transparent">
+              <h3 class="card-title"> fiche de projet : {{data[0].memberships[0].project.name}} </h3>
+              <table class="table" class="table table-hover">
+
+
+
+                <tbody>
+
+                  <tr class='clickable-row'>
+                    <td>id</td>
+                    <td>{{data1[0].project.id}}</td>
+                  </tr>
+                  <tr class='clickable-row'>
+                    <td> name </td>
+                    <td>{{data1[0].project.name}}</td>
+                  </tr>
+                  <tr class='clickable-row'>
+                    <td> description </td>
+                    <td>{{data1[0].project.description}}</td>
+                  </tr>
+                  <tr class='clickable-row'>
+                    <td> date of creation </td>
+                    <td>{{data1[0].project.created_on}}</td>
+                  </tr>
+                  <tr class='clickable-row'>
+                    <td> public </td>
+                    <td>{{data1[0].project.is_public}}</td>
+                  </tr>
+
+
+
+
+
+
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" id="divElement" style="background-color: #ffd57a">
+            <div class="card-header border-transparent">
+              <h3 class="card-title">Members of {{data[0].memberships[0].project.name}} </h3>
+
+
+            </div>
+            <table class="table" class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">id membre</th>
+                  <th scope="col">id user </th>
+                  <th scope="col">name</th>
+                  <th scope="col">role</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr class='clickable-row' *ngFor="let item of data[0].memberships">
+
+                  <td> {{item.id}}</td>
+                  <td> {{item.user.id}}</td>
+                  <td> {{item.user.name}}</td>
+
+                  <td> {{item.roles[0].name}}</td>
+
+
+
+                </tr>
+
+              </tbody>
+            </table>
+        </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+</div>

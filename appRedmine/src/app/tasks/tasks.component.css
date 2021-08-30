@@ -1,0 +1,13 @@
+#divchart{
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+#divElement{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    margin-top: -10px;
+    margin-left: -20px;
+   
+}

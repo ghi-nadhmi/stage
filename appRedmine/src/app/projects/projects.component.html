@@ -1,0 +1,41 @@
+<div class="wrapper">
+
+  <app-menu></app-menu>
+
+  <div class="content-wrapper">
+    <div class="card" id="divElement" style="background-color: #ffd57a">
+      <div class="card-header border-transparent">
+        <h3 class="card-title">Project List </h3>
+
+         
+      </div>
+    
+      <table class="table" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">description</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class='clickable-row' *ngFor="let item of data[0].projects" routerLink="/memberships"
+            (click)=SetID(item.id)>
+
+
+            <td> {{item.id}}</td>
+            <td> {{item.name}}</td>
+            <td>{{item.description}}<td>
+            <td> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg> more </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
